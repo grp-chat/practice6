@@ -210,6 +210,7 @@ sock.on('transmituser', data => {
 sock.on('appendchallenger', data => {
     getTheRightDiv = document.getElementById(data.whichUser);
     const shortNameDiv = document.createElement('div');
+        shortNameDiv.setAttribute("id", "temdivs")
         shortNameDiv.innerText = data.nickname;
         getTheRightDiv.append(shortNameDiv);
     
@@ -251,11 +252,18 @@ sock.on('refreshall', data => {
     roundNum = data;
     labelRes.innerHTML = "Round " + roundNum + " - Result:";
 
-
     var clearIt = document.getElementById(nickname + "inputres");
     clearIt.value = '';
     clearIt = document.getElementById(nickname + "inputpen");
     clearIt.value = '';
+
+    /* for (const val of students) {
+        var clearTheDivs = document.getElementById(val);
+        clearTheDivs.innerHTML = '';
+    } */
+
+    /* var clearTempDivs = document.getElementById("tempdivs");
+    clearTempDivs.remove(); */
 });
 
 sock.on('reshistory', data => {
@@ -969,6 +977,7 @@ function createSideDiv(whichUser) {
     if (whichUser === nickname) {
         challBtn.disabled = true;
     }
+    challBtn.disabled = true;
 
     var div5 = createNewDiv();
     //div5.style.background = "rgba(255, 0, 0, 0.5)";
@@ -1093,7 +1102,7 @@ var grid6 = clickableGrid(3, 11, function (el, row, col, i) {
 
 }, "tbl6", otherUsers[4]);
 
-/* var grid7 = clickableGrid(3, 11, function (el, row, col, i) {
+var grid7 = clickableGrid(3, 11, function (el, row, col, i) {
     
 
     el.className = 'clicked';
@@ -1101,7 +1110,7 @@ var grid6 = clickableGrid(3, 11, function (el, row, col, i) {
     lastClicked = el;
     number = i
 
-}, "tbl7", otherUsers[5]); */
+}, "tbl7", otherUsers[5]);
 
 if (nickname === "TCR") {
     var grid8 = clickableGrid(3, 11, function (el, row, col, i) {
@@ -1112,7 +1121,7 @@ if (nickname === "TCR") {
         lastClicked = el;
         number = i
 
-    }, "tbl7", otherUsers[5]);
+    }, "tbl8", otherUsers[6]);
 }
 
 var topDiv = createNewDiv();
@@ -1322,7 +1331,7 @@ var sideDiv4 = createSideDiv(otherUsers[2]);
 var sideDiv5 = createSideDiv(otherUsers[3]);
 var sideDiv6 = createSideDiv(otherUsers[4]);
 var sideDiv7 = createSideDiv(otherUsers[5]);
-//var sideDiv8 = createSideDiv(otherUsers[6]);
+var sideDiv8 = createSideDiv(otherUsers[6]);
 
 bottomDiv.appendChild(grid2);
 bottomDiv.appendChild(sideDiv2);
@@ -1339,13 +1348,13 @@ bottomDiv.appendChild(sideDiv5);
 bottomDiv.appendChild(grid6);
 bottomDiv.appendChild(sideDiv6);
 
-//bottomDiv.appendChild(grid7);
-//bottomDiv.appendChild(sideDiv7);
+bottomDiv.appendChild(grid7);
+bottomDiv.appendChild(sideDiv7);
 
 
 if (nickname === "TCR") {
-    bottomDiv.appendChild(grid7);
-    bottomDiv.appendChild(sideDiv7);
+    bottomDiv.appendChild(grid8);
+    bottomDiv.appendChild(sideDiv8);
 }
 
 
