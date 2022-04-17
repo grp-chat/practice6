@@ -38,8 +38,8 @@ var rounds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; */
 
 /* var team1 = ["LK", "JHA", "SZF"];
 var team2 = ["TJY", "LXR", "JL"]; */
-var otherUsers = ["LOK", "JW", "CED", "CJH", "KX", "KN", "JAY"];
-var students = ["LOK", "JW", "CED", "CJH", "KX", "KN", "JAY"];
+var otherUsers = ["LOK", "JW", "CED", "CJH", "KX", "KN", "JAY", "JT", "KSY"];
+var students = ["LOK", "JW", "CED", "CJH", "KX", "KN", "JAY", "JT", "KSY"];
 var rounds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 var nickname = '';
@@ -151,6 +151,10 @@ const promptMsg = () => {
         nickname = 'LSH'
     } else if (nick === '7385') {
         nickname = 'RYD'
+    } else if (nick === '4162') {
+        nickname = 'JT'
+    } else if (nick === '6139') {
+        nickname = 'KSY'
     } else {
         alert("Wrong pin number!");
         promptMsg();
@@ -1136,8 +1140,28 @@ var grid7 = clickableGrid(3, 11, function (el, row, col, i) {
 
 }, "tbl7", otherUsers[5]);
 
+var grid8 = clickableGrid(3, 11, function (el, row, col, i) {
+    
+
+    el.className = 'clicked';
+    if (lastClicked) lastClicked.className = '';
+    lastClicked = el;
+    number = i
+
+}, "tbl8", otherUsers[6]);
+
+var grid9 = clickableGrid(3, 11, function (el, row, col, i) {
+    
+
+    el.className = 'clicked';
+    if (lastClicked) lastClicked.className = '';
+    lastClicked = el;
+    number = i
+
+}, "tbl9", otherUsers[7]);
+
 if (nickname === "TCR") {
-    var grid8 = clickableGrid(3, 11, function (el, row, col, i) {
+    var grid10 = clickableGrid(3, 11, function (el, row, col, i) {
 
 
         el.className = 'clicked';
@@ -1145,7 +1169,7 @@ if (nickname === "TCR") {
         lastClicked = el;
         number = i
 
-    }, "tbl8", otherUsers[6]);
+    }, "tbl10", otherUsers[8]);
 }
 
 var topDiv = createNewDiv();
@@ -1167,7 +1191,7 @@ topDiv.appendChild(sideDiv1);
 //LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====
 labelRes = document.createElement('h2');
 //labelRes.setAttribute("id", "labelres");
-labelRes.innerHTML = "Round 1 - Result:";
+labelRes.innerHTML = "Round 10 Result:";
 labelRes.style.width = "250px";
 labelRes.style.color = "mediumblue";
 labelRes.style.float = "left";
@@ -1356,6 +1380,8 @@ var sideDiv5 = createSideDiv(otherUsers[3]);
 var sideDiv6 = createSideDiv(otherUsers[4]);
 var sideDiv7 = createSideDiv(otherUsers[5]);
 var sideDiv8 = createSideDiv(otherUsers[6]);
+var sideDiv9 = createSideDiv(otherUsers[7]);
+var sideDiv10 = createSideDiv(otherUsers[8]);
 
 bottomDiv.appendChild(grid2);
 bottomDiv.appendChild(sideDiv2);
@@ -1375,10 +1401,16 @@ bottomDiv.appendChild(sideDiv6);
 bottomDiv.appendChild(grid7);
 bottomDiv.appendChild(sideDiv7);
 
+bottomDiv.appendChild(grid8);
+bottomDiv.appendChild(sideDiv8);
+
+bottomDiv.appendChild(grid9);
+bottomDiv.appendChild(sideDiv9);
+
 
 if (nickname === "TCR") {
-    bottomDiv.appendChild(grid8);
-    bottomDiv.appendChild(sideDiv8);
+    bottomDiv.appendChild(grid10);
+    bottomDiv.appendChild(sideDiv10);
 }
 
 
