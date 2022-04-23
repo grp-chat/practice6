@@ -38,8 +38,8 @@ var rounds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; */
 
 /* var team1 = ["LK", "JHA", "SZF"];
 var team2 = ["TJY", "LXR", "JL"]; */
-var otherUsers = ["LOK", "JW", "CED", "CJH", "KX", "KN", "JAY", "JT", "KSY"];
-var students = ["LOK", "JW", "CED", "CJH", "KX", "KN", "JAY", "JT", "KSY"];
+var otherUsers = ["JX", "JZ", "TWN", "LJY", "ELI", "CUR", "LSH", "RYD", "KSY"];
+var students = ["JX", "JZ", "TWN", "LJY", "ELI", "CUR", "LSH", "RYD", "KSY"];
 var rounds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 var nickname = '';
@@ -1191,7 +1191,7 @@ topDiv.appendChild(sideDiv1);
 //LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====LABEL=====
 labelRes = document.createElement('h2');
 //labelRes.setAttribute("id", "labelres");
-labelRes.innerHTML = "Round 10 Result:";
+labelRes.innerHTML = "Round 1 Result:";
 labelRes.style.width = "250px";
 labelRes.style.color = "mediumblue";
 labelRes.style.float = "left";

@@ -77,18 +77,18 @@ var objJL = new Person("JL", 0, 0, 0, 0, false);
 var objSZF = new Person("SZF", 0, 0, 0, 0, false);
 var objUsers = [objTJY, objLXR, objJL, objLK, objJHA, objSZF]; */
 
-var users = ["LOK", "JW", "CED", "CJH", "KX", "KN", "JAY", "JT", "KSY"];
+var users = ["JX", "JZ", "TWN", "LJY", "ELI", "CUR", "LSH", "RYD", "KSY"];
 
-var objLOK = new Person("LOK", 0, 0, 0, 0, false);
-var objJW = new Person("JW", 0, 0, 0, 0, false);
-var objCED = new Person("CED", 0, 0, 0, 0, false);
-var objCJH = new Person("CJH", 0, 0, 0, 0, false);
-var objKX = new Person("KX", 0, 0, 0, 0, false);
-var objKN = new Person("KN", 0, 0, 0, 0, false);
-var objJAY = new Person("JAY", 0, 0, 0, 0, false);
-var objJT = new Person("JT", 0, 0, 0, 0, false);
+var objJX = new Person("JX", 0, 0, 0, 0, false);
+var objJZ = new Person("JZ", 0, 0, 0, 0, false);
+var objTWN = new Person("TWN", 0, 0, 0, 0, false);
+var objLJY = new Person("LJY", 0, 0, 0, 0, false);
+var objELI = new Person("ELI", 0, 0, 0, 0, false);
+var objCUR = new Person("CUR", 0, 0, 0, 0, false);
+var objLSH = new Person("LSH", 0, 0, 0, 0, false);
+var objRYD = new Person("RYD", 0, 0, 0, 0, false);
 var objKSY = new Person("KSY", 0, 0, 0, 0, false);
-var objUsers = [objLOK, objJW, objCED, objCJH, objKX, objKN, objJAY, objJT, objKSY]; //THIS ARRAY MUST FOLLOW ARRAY SEQUENCE IN INDEX.JS
+var objUsers = [objJX, objJZ, objTWN, objLJY, objELI, objCUR, objLSH, objKSY, objKSY]; //THIS ARRAY MUST FOLLOW ARRAY SEQUENCE IN INDEX.JS
 
 
 //------------------------------------------------------------------------------------------------------
